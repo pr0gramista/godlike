@@ -29,6 +29,6 @@ method_args = {
 if method_index in method_args:
     method = method_args[method_index]
 else:
-	method = method_args[1]
+	method = method_args['1']
 
 os.system('ffmpeg -i \"{}\" -ss {} -t {} {} -async 1 \"{}\"'.format(f, begin, end, method, output))

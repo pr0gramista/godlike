@@ -22,8 +22,9 @@ formats = {
 	'3': '%(id)s.%(ext)s'
 }
 
-if formats[style] is None:
-	output_format = formats[1]
-else:
+if style in formats:
 	output_format = formats[style]
+else:
+	output_format = formats['1']
+
 os.system("youtube-dl -x -i -o \"{}\" --audio-format mp3 --audio-quality 0 {}".format(output_format, url))

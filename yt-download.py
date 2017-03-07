@@ -23,8 +23,9 @@ formats = {
 	'4': '%(playlist)s/%(title)s.%(ext)s'
 }
 
-if formats[style] is None:
-	output_format = formats[1]
-else:
+if style in formats:
 	output_format = formats[style]
+else:
+	output_format = formats['1']
+
 os.system("youtube-dl -f mp4 -i -o \"{}\" {}".format(output_format, url))
