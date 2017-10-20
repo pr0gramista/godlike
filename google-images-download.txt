@@ -1,4 +1,5 @@
-// Go to your search results, put this in console and copy the output -> profit
+// Go to your search results, put this in console, copy the output and use any software for multiple downloading
+// Protip: you can use "wget -i my_txt_with_urls.txt" -P my_images
 var body = document.getElementsByTagName("body")[0];
 var images = document.getElementsByTagName("a");
 var i = 0;
