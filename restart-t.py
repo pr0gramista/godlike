@@ -1,4 +1,6 @@
-import os, re
+"""Perform system restart after given time."""
+import os
+import re
 
 print("Provide time:")
 print("Format: Xh Xm Xs")

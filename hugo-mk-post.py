@@ -1,7 +1,4 @@
-#
-# Shortcut for making post
-#
-
+"""Shortcut for making post."""
 import os
 
 print("Hugo make post")

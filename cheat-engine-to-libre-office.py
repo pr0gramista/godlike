@@ -1,3 +1,4 @@
+"""Removes name from CheatEngine executable file."""
 f = open('cheatengine-i386.exe', 'r+b')
 
 print('Loading')
@@ -25,7 +26,7 @@ for i in range(len(content)):
             break
 
     # We found it, let's replace it
-    if bad == False:
+    if bad is False:
         for x in range(len(replacement)):
             content[i + x] = replacement[x]
             replaced = replaced + 1

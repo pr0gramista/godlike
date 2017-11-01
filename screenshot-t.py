@@ -1,7 +1,9 @@
-import os, re
+"""Make screenshot after given time."""
+import os
+import re
 from time import sleep
 
-#pip install Pillow
+# pip install Pillow
 from PIL import ImageGrab
 
 print("Provide time:")
