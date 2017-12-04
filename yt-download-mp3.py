@@ -28,5 +28,5 @@ if style in formats:
 else:
     output_format = formats['1']
 
-os.system("youtube-dl -x -i -o \"{}\" --audio-format mp3 --audio-quality 0 {}"
+os.system("youtube-dl --download-archive downloads-mp3.txt -x -i -o \"{}\" --audio-format mp3 --audio-quality 0 {}"
           .format(output_format, url))
