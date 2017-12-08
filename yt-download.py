@@ -12,12 +12,22 @@ formats = {
     '3': '%(id)s.%(ext)s',
     '4': '%(playlist)s/%(title)s.%(ext)s'
 }
+
 formats_long = {
     'standard': '%(title)s.%(ext)s',
     'album': '%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s',
     'id': '%(id)s.%(ext)s',
     'playlist': '%(playlist)s/%(title)s.%(ext)s'
 }
+
+
+def print_help():
+    print(
+        "{}\n"
+        "-i -interactive\n"
+        "-f -format [standard, album, id, playlist]\n"
+        "[url]".format(sys.argv[0]))
+
 
 # Interactive mode
 if '-i' in sys.argv or '-interactive' in sys.argv:
@@ -39,19 +49,18 @@ if '-i' in sys.argv or '-interactive' in sys.argv:
 
     os.system("youtube-dl -f mp4 -i -o \"{}\" {}".format(output_format, url))
 elif '-h' in sys.argv or '-help' in sys.argv or len(sys.argv) == 0:
-    print(
-        "{}\n"
-        "-i -interactive\n"
-        "-f -format [standard, album, id, playlist]\n"
-        "[url]".format(sys.argv[0]))
+    print_help()
 else:
-    format = 'standard'
-    if '-f' in sys.argv:
-        format_index = sys.argv.index('-f') + 1
-        if len(sys.argv) > format_index:
-            format = sys.argv[format_index]
+    try:
+        format = 'standard'
+        if '-f' in sys.argv:
+            format_index = sys.argv.index('-f') + 1
+            if len(sys.argv) > format_index:
+                format = sys.argv[format_index]
 
-    url = sys.argv[-1]
-    output_format = formats_long[format]
+        url = sys.argv[-1]
+        output_format = formats_long[format]
 
-    os.system("youtube-dl -f mp4 -i -o \"{}\" {}".format(output_format, url))
+        os.system("youtube-dl -f mp4 -i -o \"{}\" {}".format(output_format, url))
+    except Exception as e:
+        print_help()
