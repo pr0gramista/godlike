@@ -3,14 +3,10 @@ import os
 
 print("ffmpeg-cut")
 print("Time format: HH:MM:ss")
-print("Path to file:")
-f = input()
-print("From:")
-begin = input()
-print("To:")
-end = input()
-print("Output file:")
-output = input()
+source = input("Source file:\n")
+begin = input("From:\n")
+end = input("To:\n")
+output = input("Output:\n")
 
 print("Method:")
 print("1. Copy (the beginning may be corrupted)")
@@ -28,4 +24,4 @@ else:
     method = method_args['1']
 
 os.system('ffmpeg -i \"{}\" -ss {} -t {} {} -async 1 \"{}\"'
-          .format(f, begin, end, method, output))
+          .format(source, begin, end, method, output))
