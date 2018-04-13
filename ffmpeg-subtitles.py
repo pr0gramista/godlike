@@ -26,7 +26,7 @@ if '-i' in sys.argv or '-interactive' in sys.argv:
 
     os.system('ffmpeg -i {} -vf subtitles={}:force_style="Fontsize={}" {}'
               .format(video_path, subs_path, size, output))
-elif '-h' in sys.argv or '-help' in sys.argv or len(sys.argv) == 0:
+elif '-h' in sys.argv or '-help' in sys.argv or len(sys.argv) == 1:
     print_help()
 else:
     try:

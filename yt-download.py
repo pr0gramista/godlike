@@ -48,7 +48,7 @@ if '-i' in sys.argv or '-interactive' in sys.argv:
         output_format = formats['1']
 
     os.system("youtube-dl -f mp4 -i -o \"{}\" {}".format(output_format, url))
-elif '-h' in sys.argv or '-help' in sys.argv or len(sys.argv) == 0:
+elif '-h' in sys.argv or '-help' in sys.argv or len(sys.argv) == 1:
     print_help()
 else:
     try:

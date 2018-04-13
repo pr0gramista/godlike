@@ -15,7 +15,7 @@ if '-i' in sys.argv or '-interactive' in sys.argv:
     o = input("Output file (with extension):\n")
 
     os.system('ffmpeg -i {} -vcodec h264 -acodec aac {}'.format(f, o))
-elif '-h' in sys.argv or '-help' in sys.argv or len(sys.argv) == 0:
+elif '-h' in sys.argv or '-help' in sys.argv or len(sys.argv) == 1:
     print_help()
 else:
     try:

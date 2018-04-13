@@ -56,7 +56,7 @@ if '-i' in sys.argv or '-interactive' in sys.argv:
     os.system("youtube-dl --download-archive downloads-mp3.txt -x -i -o \"{}\" --audio-format "
               "mp3 --audio-quality 0 {}"
               .format(output_format, url))
-elif '-h' in sys.argv or '-help' in sys.argv or len(sys.argv) == 0:
+elif '-h' in sys.argv or '-help' in sys.argv or len(sys.argv) == 1:
     print_help()
 else:
     try:
