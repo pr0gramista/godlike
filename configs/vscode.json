@@ -1,0 +1,14 @@
+{
+  "window.zoomLevel": 0,
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "materialTheme.fixIconsRunning": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.fontFamily": "Liga Inconsolata-g", // https://github.com/ToxicFrog/Ligaturizer
+  "editor.fontLigatures": true,
+  "editor.formatOnSaveTimeout": 2000,
+  "editor.mouseWheelZoom": true
+}
