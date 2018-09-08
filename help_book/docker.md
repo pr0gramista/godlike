@@ -36,7 +36,7 @@ docker export name_of_container > container.tar
 docker image rm $(docker image ls -a -q)
 
 // Remove all containers
-docker container rm $(docker container ls -a -q)
+docker rm $(docker ps -a -q)
 
 // Attach volume with bind mounts (host directory to container directory)
 docker run -v /host/wow:/container/wow ...
