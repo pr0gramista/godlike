@@ -1,0 +1,30 @@
+Default settings: Esc + R Del + L Ctrl + right arrow for 3 seconds
+Fn + Win = Win key locking
+Fn + F12 = Whole keyboard locking (lol)
+Fn + F1 = My computer
+Fn + F2 = Browser
+Fn + F3 = Calculator
+Fn + F4 = Media playesr
+Fn + F5 = Last
+Fn + F6 = Next
+Fn + F7 = Pause/Play
+Fn + F8 = Stop
+Fn + F9 = Mute
+Fn + F10 = Vol-
+Fn + F11 = Vol+
+
+Backlight Keys ( for backlit DIY keyboard only):
+- Fn+ Esc= keyboard led on/off
+- Fn+ Spacebar= led mode pause/continue
+- Fn+ Pause= led modes changeover
+- Fn+L/R arrow= led frequency +/-
+- Fn+ Up/down arrow= led brightness +/-
+ 
+Record LED mode 1:
+- Fn+PgUp for 3s( PgUp indicator flashing ), start define led mode 1 ,press Fn+PgUp again to save it
+ 
+Record LED mode 2:
+- Fn+PgDn for 3s( PgDn indicator flashing ), start define led mode 2 ,press Fn+PgDn again to save it
+ 
+Mode 1 and Mode 2 changeover:
+- Fn+End
