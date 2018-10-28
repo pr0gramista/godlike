@@ -12,3 +12,7 @@ Some scripts here requires ffmpeg and/or youtube-dl to be on the path. These two
 
 #### Things you may need on Windows
 Add this repository to your PATH and use `ls` or fix explorer by `explorer-reload`
+
+#### Gist section
+- [Abstraction over some API in Go](https://gist.github.com/pr0gramista/ad508abcaeccc4a00051e607897ea6e7)
+- [Mock API - serving JSON files in Go](https://gist.github.com/pr0gramista/69f01e2c720ecf2955bba239218c0f8d)
