@@ -44,3 +44,9 @@ docker run -v /host/wow:/container/wow ...
 docker run --name test -it debian
 // Docs: This example runs a container named test using the debian:latest image. The -it instructs Docker to
 allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
+
+// Get id of container running your app
+docker ps | grep my_awesome_app_run | awk '{print $1}'
+
+// Get id of contaienr running your app and connect to it by bash
+docker exec -it $(docker ps | grep my_awesome_app_run | awk '{print $1}') bash 
