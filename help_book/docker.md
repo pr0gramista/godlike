@@ -57,3 +57,6 @@ docker exec -it $(docker ps | grep my_awesome_app_run | awk '{print $1}') bash
 
 # docker-compose build; docker-compose up; docker-compose down
 dcb; dcup; dcdn
+
+# Docker run and expose all EXPOSE ports
+docker run -P my_app
