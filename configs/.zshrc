@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/r/.oh-my-zsh"
 
+export PATH="$PATH":"$HOME/flutter/.pub-cache/bin:/Users/r/flutter/bin/cache/dart-sdk/bin"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -62,9 +64,12 @@ ZSH_THEME="one"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/NAME_HERE
 plugins=(
   git
   osx
+  gcloud
   docker
   docker-compose
   fzf
@@ -72,9 +77,15 @@ plugins=(
   npm
   yarn
   encode64
-  jira
   catimg
+  git-prompt
+  vscode
+  z
 )
+
+# vim $(fzf --height 40%)
+
+plugins=(you-should-use $plugins)
 
 source $ZSH/oh-my-zsh.sh
 
