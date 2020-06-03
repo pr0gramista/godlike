@@ -1,6 +1,5 @@
 {
   "window.zoomLevel": 0,
-  // "editor.formatOnSave": true,
   "eslint.autoFixOnSave": true,
   "editor.tabSize": 2,
   "files.eol": "\n",
@@ -38,6 +37,8 @@
   },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.colorTheme": "Electron",
+  "workbench.colorTheme": "Atom One Dark",
+  "dart.allowAnalytics": false,
+  "dart.previewFlutterUiGuides": true,
   "editor.formatOnSave": true
 }
