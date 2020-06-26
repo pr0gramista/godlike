@@ -123,3 +123,19 @@ if [ -f '/Users/r/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/r/google-clou
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/r/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/r/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Alias for checking which process is using specific port in macOS
+# Example use:
+# port 8080
+port() {
+  lsof -nP -iTCP:$1 | grep LISTEN
+}
+
+# Aliases for setting local Git email to work one
+gitwork() {
+  git config user.email "bartosz.wisniewski@arcsoftware.it"
+}
+
+gitworkamend() {
+  git commit --amend --author="Bartosz Wiśniewski <bartosz.wisniewski@arcsoftware.it>"
+}
