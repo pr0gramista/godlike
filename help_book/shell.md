@@ -12,4 +12,9 @@ echo {"hello": "me"} | jq -r .hello
 
 # Redo command with sudo
 sudo !!
+
+# Background jobs (Ctrl+Z to go background)
+jobs
+bg [job_number]
+fg [job_number]
 ```
