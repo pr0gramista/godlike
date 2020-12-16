@@ -131,6 +131,11 @@ port() {
   lsof -nP -iTCP:$1 | grep LISTEN
 }
 
+# Open Chrome without security so we can ignore missing CORS headers
+nocorschrome() {
+  open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+}
+
 # Aliases for setting local Git email to work one
 gitwork() {
   git config user.email "bartosz.wisniewski@arcsoftware.it"
