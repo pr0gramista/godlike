@@ -123,11 +123,45 @@
     ],
     "description": "Make test case stub"
   },
-  "Component function": {
+  "Functional component": {
     "scope": "javascript,typescript,typescriptreact,javascriptreact",
     "prefix": "mfcomponent",
     "body": ["const $1 = ({ $2 }) => (<div>$3</div>);"],
     "description": "Make component function"
+  },
+  "Functional component template": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "tfc",
+    "body": [
+      "import React from 'react';",
+      "import styles from './index.module.scss';",
+      "",
+      "const $1 = ({ $2 }) => {",
+      "  return (<div className={styles.root}>$1</div>);",
+      "}",
+      "",
+      "export default $1"
+    ],
+    "description": "Functional component template"
+  },
+  "Functional component template TS": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "tfc",
+    "body": [
+      "import React from 'react';",
+      "import styles from './index.module.scss';",
+      "",
+      "export interface $1Props {",
+      "",
+      "}",
+      "",
+      "const $1 = ({ $2 } : $1Props) => {",
+      "  return (<div className={styles.root}>$1</div>);",
+      "}",
+      "",
+      "export default $1"
+    ],
+    "description": "Functional component template"
   },
   "Component": {
     "scope": "javascript,typescript,typescriptreact,javascriptreact",
@@ -182,6 +216,12 @@
     "body": ["import styles from './index.module.scss';"],
     "description": "Import index.module.scss"
   },
+  "Import classnames": {
+    "scope": "javascript,typescript,typescriptreact,javascriptreact",
+    "prefix": "icn",
+    "body": ["import cn from 'classnames';"],
+    "description": "Import classnames"
+  },
   "className to styles": {
     "scope": "javascript,typescript,typescriptreact,javascriptreact",
     "prefix": "cstyle",
@@ -223,5 +263,47 @@
       "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState<$2 | undefined>()"
     ],
     "description": "useState"
+  },
+  "React Native": {
+    "scope": "javascript,typescript,typescriptreact,javascriptreact",
+    "prefix": "mrn",
+    "body": ["import { View, StyleSheet, Text } from 'react-native'"],
+    "description": "Import react native basic components"
+  },
+  "Ant Design icon": {
+    "scope": "javascript,typescript,typescriptreact,javascriptreact",
+    "prefix": "ianticon",
+    "body": ["import { $1 } from '@ant-design/icons';"],
+    "description": "Import icon from Ant Design icons"
+  },
+  "Test Stub component": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "mtcomp",
+    "description": "Create component test stub",
+    "body": [
+      "import React from 'react';",
+      "import { Router } from 'react-router-dom';",
+      "import { render } from '@testing-library/react';",
+      "import { createMemoryHistory } from 'history';",
+      "import $1, { $1Props } from '../';",
+
+      "describe('$1', () => {",
+      "  const history = createMemoryHistory();",
+      "  const defaultProps = {};",
+      "",
+      "  const renderComponent = (props: Partial<$1Props>) =>",
+      "    render(",
+      "      <Router history={history}>",
+      "        <$1 {...defaultProps} {...props} />",
+      "      </Router>",
+      "    );",
+      "",
+      "  it('should have text', () => {",
+      "    const { getByText } = renderComponent({}});",
+      "",
+      "    expect(getByText(/Example/)).toBeInTheDocument();",
+      "  });",
+      "});"
+    ]
   }
 }

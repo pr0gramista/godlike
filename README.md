@@ -1,18 +1,21 @@
-# My lovely scripts and more
+# Lovely scripts and configs 🎉
 Things I use more or less.
 
+## Great software to use
+- [ffmpeg](https://www.ffmpeg.org)
+- [youtube-dl](https://rg3.github.io/youtube-dl/)
+- [ncdu](https://dev.yorhel.nl/ncdu)
+
+## Most important configs
+- [.zshrc](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/.zshrc)
+- [snippets.json](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/snippets.json)
+- [vscode.json](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/vscode.json)
+- [keybindings.json](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/keybindings.json)
+
 #### [Help book](https://github.com/pr0gramista/godlike-scripts/tree/master/help_book)
-Useful commands I usually forget after a while...
-
-#### [Configs](https://github.com/pr0gramista/godlike-scripts/tree/master/configs)
-Almost never up-to-date here. There are also some sw33t snippets.
-
-#### [FFmpeg](https://www.ffmpeg.org/) and [youtube-dl](https://rg3.github.io/youtube-dl/)
-Some scripts here requires ffmpeg and/or youtube-dl to be on the path. These two always do a great job at handling YouTube.
-
-#### Things you may need on Windows
-Add this repository to your PATH and use `ls` or fix explorer by `explorer-reload`
+Bunch of command examples I usually forget after a while...
 
 #### Gist section
 - [Abstraction over some API in Go](https://gist.github.com/pr0gramista/ad508abcaeccc4a00051e607897ea6e7)
 - [Mock API - serving JSON files in Go](https://gist.github.com/pr0gramista/69f01e2c720ecf2955bba239218c0f8d)
+- [Reverse proxy in Go using Gin](https://gist.github.com/pr0gramista/967836d17c7019c0556ee61dd6a9d5ca)
