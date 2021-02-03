@@ -144,3 +144,12 @@ gitwork() {
 gitworkamend() {
   git commit --amend --author="Bartosz Wiśniewski <bartosz.wisniewski@arcsoftware.it>"
 }
+
+# Undo last commit
+gitundo() {
+  git reset --soft HEAD~1
+}
+
+gitsup() {
+  git push --set-upstream origin `git symbolic-ref --short HEAD`
+}
