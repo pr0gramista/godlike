@@ -26,5 +26,5 @@ CMD + Arrow down - open file (macOS...) or space
 + [kubectl](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/kubectl) - fe. kga (kubectl get all), kdels myapp (kubectl delete service myapp)
 + [docker-compose](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/docker-compose) - fe. dcb (docker-compose build), dcup (docker-compose up), dcdn
 + encode64 - encode64, decode64 commands
-+ [macOS](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/osx) - pfs (Finder selection path), pfd (path of Finder)
-+ [git](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git) - gst, glog, gl
++ [macOS](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/osx) - cdf (cd to current Finder directory), pfs (Finder selection path), pfd (path of Finder)
++ [git](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git) - gp, gst, glog, gl
