@@ -12,6 +12,13 @@ gcloud container clusters list
 
 # Update kubectl credentials/config to desired cluster
 gcloud container clusters get-credentials <cluster name>
+
+# Cloud Run deployment
+docker build -t gcr.io/my-project/my-app:0.0.1 .
+docker push gcr.io/my-project/my-app:0.0.1
+
+gcloud run deploy my-app --image=gcr.io/my-project/my-app:0.0.1  
+
 ```
 Cloud Build
 ```
