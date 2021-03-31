@@ -4,6 +4,12 @@
 # Get list of projects
 gcloud projects list
 
+# Get list of accounts
+gcloud auth list
+
+# Change active account
+gcloud config set account `ACCOUNT`
+
 # Set project
 gcloud config set project <name>
 
