@@ -124,6 +124,9 @@ if [ -f '/Users/r/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/r/google-clou
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/r/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/r/google-cloud-sdk/completion.zsh.inc'; fi
 
+# Rust's Cargo path
+export PATH=$PATH:$HOME/.cargo/bin
+
 # Alias for checking which process is using specific port in macOS
 # Example use:
 # port 8080
