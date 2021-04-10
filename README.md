@@ -5,6 +5,9 @@ Things I use more or less.
 - [ffmpeg](https://www.ffmpeg.org)
 - [youtube-dl](https://rg3.github.io/youtube-dl/)
 - [ncdu](https://dev.yorhel.nl/ncdu)
+- [vegeta](https://github.com/tsenart/vegeta)
+- [serve](https://github.com/vercel/serve)
+- [ngrok](https://ngrok.com/)
 
 ## Most important configs
 - [.zshrc](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/.zshrc)
