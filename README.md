@@ -23,3 +23,5 @@ Bunch of command examples I usually forget after a while...
 - [Mock API - serving JSON files in Go](https://gist.github.com/pr0gramista/69f01e2c720ecf2955bba239218c0f8d)
 - [Reverse proxy in Go using Gin](https://gist.github.com/pr0gramista/967836d17c7019c0556ee61dd6a9d5ca)
 - [Postman Firebase Auth Pre-request script](https://gist.github.com/pr0gramista/0b3060221e558f1875dbb6d569baa89e)
+- [Clean all Flutter project in current directory](https://gist.github.com/pr0gramista/5a0c66de6585a75ec06aadcd837e65e8)
+- [Clean all node_modules in current directory](https://gist.github.com/pr0gramista/b883fb45011e72daa35a92640860f33d)
