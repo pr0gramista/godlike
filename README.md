@@ -25,3 +25,4 @@ Bunch of command examples I usually forget after a while...
 - [Postman Firebase Auth Pre-request script](https://gist.github.com/pr0gramista/0b3060221e558f1875dbb6d569baa89e)
 - [Clean all Flutter project in current directory](https://gist.github.com/pr0gramista/5a0c66de6585a75ec06aadcd837e65e8)
 - [Clean all node_modules in current directory](https://gist.github.com/pr0gramista/b883fb45011e72daa35a92640860f33d)
+- [Flutter - generate code coverage with filtering](https://gist.github.com/pr0gramista/e6d19eb26dbbf39c82f500f7a7df052f)
