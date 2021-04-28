@@ -156,3 +156,7 @@ gitundo() {
 gitsup() {
   git push --set-upstream origin `git symbolic-ref --short HEAD`
 }
+
+buildrunner() {
+  flutter pub run build_runner build
+}
