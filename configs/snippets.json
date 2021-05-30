@@ -144,6 +144,25 @@
     ],
     "description": "Functional component template"
   },
+  "Functional React Native component template": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "tfcrn",
+    "body": [
+      "import React from 'react';",
+      "import styled from 'styled-components/native';",
+      "",
+      "const StyledView = styled.View`",
+      "  background-color: red;",
+      "`",
+      "",
+      "const $1 = ({ $2 }) => {",
+      "  return (<StyledView>$1</StyledView>);",
+      "}",
+      "",
+      "export default $1"
+    ],
+    "description": "Functional component template"
+  },
   "Functional component template TS": {
     "scope": "typescript,typescriptreact",
     "prefix": "tfc",
@@ -157,6 +176,29 @@
       "",
       "const $1 = ({ $2 } : $1Props) => {",
       "  return (<div className={styles.root}>$1</div>);",
+      "}",
+      "",
+      "export default $1"
+    ],
+    "description": "Functional component template"
+  },
+  "Functional React Native component template TS": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "tfcrn",
+    "body": [
+      "import React from 'react';",
+      "import styled from 'styled-components/native';",
+      "",
+      "const StyledView = styled.View`",
+      "  background-color: red;",
+      "`",
+      "",
+      "export interface $1Props {",
+      "",
+      "}",
+      "",
+      "const $1 = ({ $2 } : $1Props) => {",
+      "  return (<StyledView>$1</StyledView>);",
       "}",
       "",
       "export default $1"
@@ -276,6 +318,24 @@
     "body": ["import { $1 } from '@ant-design/icons';"],
     "description": "Import icon from Ant Design icons"
   },
+  "Import flutter_bloc": {
+    "scope": "dart",
+    "prefix": "ibloc",
+    "body": ["import 'package:flutter_bloc/flutter_bloc.dart';"],
+    "description": "Import flutter_bloc"
+  },
+  "Import collection": {
+    "scope": "dart",
+    "prefix": "icoll",
+    "body": ["import 'package:collection/collection.dart';"],
+    "description": "Import collection for extensions"
+  },
+  "Create @override props - equatable": {
+    "scope": "dart",
+    "prefix": "cprops",
+    "body": ["@override", "List<Object> get props => [$1];"],
+    "description": "Override props getter"
+  },
   "Test Stub component": {
     "scope": "typescript,typescriptreact",
     "prefix": "mtcomp",
@@ -303,6 +363,62 @@
       "",
       "    expect(getByText(/Example/)).toBeInTheDocument();",
       "  });",
+      "});"
+    ]
+  },
+  "Stateless Widget template": {
+    "scope": "dart",
+    "prefix": "tstateless",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "",
+      "class $1 extends StatelessWidget {",
+      "  const $1({Key? key}) : super(key: key);",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return SizedBox();",
+      "  }",
+      "}"
+    ],
+    "description": "Stateless Widget template"
+  },
+  "Cubit test": {
+    "scope": "dart",
+    "prefix": "tcubittest",
+    "body": [
+      "import 'package:flutter_test/flutter_test.dart';",
+      "",
+      "void main() {",
+      "  group('$1', () {",
+      "    late $1 cubit;",
+      "",
+      "    setUp(() {",
+      "      cubit = $1();",
+      "    });",
+      "",
+      "    test('initial state is XXX', () {",
+      "      expect(cubit.state, []);",
+      "    });",
+      "",
+      "    test('emits...', () {",
+      "      cubit.addDocument(\"Script\", \"Hello World!\");",
+      "",
+      "      expect(cubit.state[0].name, \"Script\");",
+      "      expect(cubit.state[0].text, \"Hello World!\");",
+      "      expect(cubit.state[0].id, isNotEmpty);",
+      "    });",
+      "  });",
+      "}"
+    ],
+    "description": "Cubit test template"
+  },
+  "Cubit Builder": {
+    "scope": "dart",
+    "prefix": "ccubitbuilder",
+    "body": [
+      "return BlocBuilder<$1Cubit, $1State>(builder: (context, state) {",
+      "  return SizedBox();",
       "});"
     ]
   }
