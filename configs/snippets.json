@@ -421,5 +421,38 @@
       "  return SizedBox();",
       "});"
     ]
+  },
+  "Widget test": {
+    "scope": "dart",
+    "prefix": "twidgettest",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "import 'package:flutter_test/flutter_test.dart';",
+      "",
+      "import '../utils.dart';",
+      "",
+      "void main() {",
+      "  group('$1', () {",
+      "    testWidgets('can be found', (WidgetTester tester) async {",
+      "      const key = Key('my_widget');",
+      "",
+      "      await tester.pumpWidget(",
+      "        boilerplate(",
+      "          child: Column(",
+      "            children: [",
+      "              const Text(",
+      "                'Hello',",
+      "                key: key,",
+      "              ),",
+      "            ],",
+      "          ),",
+      "        ),",
+      "      );",
+      "",
+      "      expect(find.byKey(key), findsNothing);",
+      "    });",
+      "  });",
+      "}"
+    ]
   }
 }
