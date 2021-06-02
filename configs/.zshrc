@@ -10,6 +10,9 @@ export PATH="$PATH":"$HOME/flutter/.pub-cache/bin:/Users/r/flutter/bin/cache/dar
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
+# This one is from: https://github.com/benniemosher/the-one-theme/blob/master/zsh/TheOne.zsh-theme
+# Copy .zsh-theme and put in ~/.oh-my-zsh/themes
 ZSH_THEME="one"
 
 # Set list of themes to pick from when loading at random
@@ -72,7 +75,7 @@ plugins=(
   gcloud
   docker
   docker-compose
-  fzf
+  fzf # fzf requires installment of fzf - brew install fzf
   kubectl
   npm
   yarn
@@ -85,6 +88,8 @@ plugins=(
 
 # vim $(fzf --height 40%)
 
+# Installment proceess for you-should-use:
+# git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ~/.oh-my-zsh/plugins/you-should-use
 plugins=(you-should-use $plugins)
 
 source $ZSH/oh-my-zsh.sh
@@ -148,6 +153,11 @@ gitworkamend() {
   git commit --amend --author="Bartosz Wiśniewski <bartosz.wisniewski@arcsoftware.it>"
 }
 
+gitsetup() {
+  git config --global user.email "kontakt@pr0gramista.pl"
+  git config --global user.name "Bartosz Wiśniewski"
+}
+
 # Undo last commit
 gitundo() {
   git reset --soft HEAD~1
@@ -159,4 +169,8 @@ gitsup() {
 
 buildrunner() {
   flutter pub run build_runner build
+}
+
+buildrunnerforce() {
+  flutter pub run build_runner build --delete-conflicting-outputs
 }
