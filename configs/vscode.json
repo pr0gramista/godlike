@@ -1,27 +1,11 @@
 {
-  "window.zoomLevel": 0,
-  "eslint.autoFixOnSave": true,
-  "editor.tabSize": 2,
-  "files.eol": "\n",
+  "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "Cascadia Code",
   "editor.fontLigatures": true,
-  "editor.formatOnSaveTimeout": 2000,
-  "editor.mouseWheelZoom": true,
-  "diffEditor.ignoreTrimWhitespace": true,
-  "breadcrumbs.enabled": true,
-  "python.formatting.provider": "black",
-  "[javascript]": {
-    "editor.defaultFormatter": "undefined_publisher.command-formatter"
-  },
+  "editor.formatOnSave": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "vue-html": "html",
-    "razor": "html",
-    "plaintext": "jade"
   },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
@@ -35,10 +19,17 @@
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.colorTheme": "Atom One Dark",
-  "dart.allowAnalytics": false,
-  "dart.previewFlutterUiGuides": true,
-  "editor.formatOnSave": true
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "terminal.external.osxExec": "/bin/zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "dart.previewFlutterUiGuides": true
 }
