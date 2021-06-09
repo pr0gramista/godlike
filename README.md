@@ -9,6 +9,7 @@ Things I use more or less.
 - [serve](https://github.com/vercel/serve)
 - [ngrok](https://ngrok.com/)
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats)
+- [pngpaste](https://github.com/jcsalterego/pngpaste)
 
 ## Most important configs
 - [.zshrc](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/.zshrc)
