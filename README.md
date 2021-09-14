@@ -3,13 +3,14 @@ Things I use more or less.
 
 ## Great software to use
 - [ffmpeg](https://www.ffmpeg.org)
-- [youtube-dl](https://rg3.github.io/youtube-dl/)
+- [youtube-dl](https://rg3.github.io/youtube-dl/) / [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 - [ncdu](https://dev.yorhel.nl/ncdu)
 - [vegeta](https://github.com/tsenart/vegeta)
 - [serve](https://github.com/vercel/serve)
-- [ngrok](https://ngrok.com/)
+- [ngrok](https://ngrok.com/) / [localtunnel](https://github.com/localtunnel/localtunnel)
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats)
 - [pngpaste](https://github.com/jcsalterego/pngpaste)
+- [httpx](https://github.com/encode/httpx/)
 
 ## Most important configs
 - [.zshrc](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/.zshrc)
