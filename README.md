@@ -10,6 +10,7 @@ Things I use more or less.
 - [ngrok](https://ngrok.com/) / [localtunnel](https://github.com/localtunnel/localtunnel)
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats)
 - [pngpaste](https://github.com/jcsalterego/pngpaste)
+- [tldr](https://tldr.ostera.io/)
 - [httpx](https://github.com/encode/httpx/)
 
 ## Most important configs
