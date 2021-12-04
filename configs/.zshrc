@@ -1,18 +1,16 @@
+export ZSH_DISABLE_COMPFIX="true"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/r/.oh-my-zsh"
-
-export PATH="$PATH":"$HOME/flutter/.pub-cache/bin:/Users/r/flutter/bin/cache/dart-sdk/bin"
+export PATH="$PATH":"/Users/r/flutter/bin"
+export PATH="$PATH":"$HOME/flutter/.pub-cache/bin"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-
-# This one is from: https://github.com/benniemosher/the-one-theme/blob/master/zsh/TheOne.zsh-theme
-# Copy .zsh-theme and put in ~/.oh-my-zsh/themes
 ZSH_THEME="one"
 
 # Set list of themes to pick from when loading at random
@@ -71,11 +69,11 @@ ZSH_THEME="one"
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/NAME_HERE
 plugins=(
   git
-  osx
+  macos
   gcloud
   docker
   docker-compose
-  fzf # fzf requires installment of fzf - brew install fzf
+  fzf
   kubectl
   npm
   yarn
@@ -88,8 +86,6 @@ plugins=(
 
 # vim $(fzf --height 40%)
 
-# Installment proceess for you-should-use:
-# git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ~/.oh-my-zsh/plugins/you-should-use
 plugins=(you-should-use $plugins)
 
 source $ZSH/oh-my-zsh.sh
@@ -123,15 +119,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/r/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/r/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/r/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/r/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Rust's Cargo path
-export PATH=$PATH:$HOME/.cargo/bin
-
 # Alias for checking which process is using specific port in macOS
 # Example use:
 # port 8080
@@ -149,13 +136,13 @@ gitwork() {
   git config user.email "bartosz.wisniewski@arcsoftware.it"
 }
 
-gitworkamend() {
-  git commit --amend --author="Bartosz Wiśniewski <bartosz.wisniewski@arcsoftware.it>"
-}
-
 gitsetup() {
   git config --global user.email "kontakt@pr0gramista.pl"
   git config --global user.name "Bartosz Wiśniewski"
+}
+
+gitworkamend() {
+  git commit --amend --author="Bartosz Wiśniewski <bartosz.wisniewski@arcsoftware.it>"
 }
 
 # Undo last commit
