@@ -1,18 +1,4 @@
 # Docker
-Example Dockerfile (notice no extension)
-```
-FROM python:3
-
-WORKDIR /app
-
-ADD . /app
-
-ADD requirements.txt /
-
-RUN pip install -r requirements.txt
-
-CMD [ "python", "./workdone.py" ]
-```
 Commands
 ```
 # Build, notice the dot at the end
@@ -60,3 +46,49 @@ dcb; dcup; dcdn
 
 # Docker run and expose all EXPOSE ports
 docker run -P my_app
+```
+Example Dockerfile (notice no extension)
+
+Basic Python 3
+```
+FROM python:3
+
+WORKDIR /app
+
+ADD . /app
+
+ADD requirements.txt /
+
+RUN pip install -r requirements.txt
+
+CMD [ "python", "./workdone.py" ]
+```
+Golang with multi-stage build
+```
+FROM golang AS build
+
+WORKDIR /app
+
+COPY go.mod ./
+COPY go.sum ./
+RUN go mod download
+
+COPY *.go ./
+
+RUN go build -o /app
+
+# Stage 2 aka Runtime
+FROM gcr.io/distroless/base-debian10
+
+ENV GIN_MODE release
+
+WORKDIR /
+
+COPY --from=build /app /app
+
+EXPOSE 8080
+
+USER nonroot:nonroot
+
+ENTRYPOINT ["/app"]
+```
