@@ -31,3 +31,4 @@ Bunch of command examples I usually forget after a while...
 - [Clean all node_modules in current directory](https://gist.github.com/pr0gramista/b883fb45011e72daa35a92640860f33d)
 - [Flutter - generate code coverage with filtering](https://gist.github.com/pr0gramista/e6d19eb26dbbf39c82f500f7a7df052f)
 - [Transfering a lot of files easily](https://gist.github.com/pr0gramista/081ed0079dde7c338bc55b23f9202fbf)
+- [Infinite loop in bash](https://gist.github.com/pr0gramista/98fdad7535b9055b8405fa85463d199e)
