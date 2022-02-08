@@ -12,6 +12,7 @@ Things I use more or less.
 - [pngpaste](https://github.com/jcsalterego/pngpaste)
 - [tldr](https://tldr.ostera.io/)
 - [httpx](https://github.com/encode/httpx/)
+- [Snapdrop](https://snapdrop.net)
 
 ## Most important configs
 - [.zshrc](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/.zshrc)
