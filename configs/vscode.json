@@ -17,7 +17,7 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[dart]": {
     "editor.formatOnSave": true,
@@ -31,5 +31,30 @@
   },
   "terminal.external.osxExec": "/bin/zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "dart.previewFlutterUiGuides": true
+  "dart.previewFlutterUiGuides": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "redhat.telemetry.enabled": false,
+  "dart.debugSdkLibraries": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": true
+  },
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.smoothScrolling": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
