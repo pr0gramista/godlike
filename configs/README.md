@@ -1,3 +1,9 @@
+# macOS
+```
+defaults write com.apple.Finder AppleShowAllFiles YES
+sudo softwareupdate --install-rosetta --agree-to-license
+```
+
 # User snippets
 Now all in [./snippets.json]
 
