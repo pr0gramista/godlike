@@ -13,6 +13,7 @@ Things I use more or less.
 - [tldr](https://tldr.ostera.io/)
 - [httpx](https://github.com/encode/httpx/)
 - [Snapdrop](https://snapdrop.net)
+- [micro](https://github.com/zyedidia/micro)
 
 ## Most important configs
 - [.zshrc](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/.zshrc)
