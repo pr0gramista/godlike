@@ -152,6 +152,7 @@ gitwork() {
 gitsetup() {
   git config --global user.email "kontakt@pr0gramista.pl"
   git config --global user.name "Bartosz Wiśniewski"
+  git config --global core.editor micro
 }
 
 gitworkamend() {
@@ -184,6 +185,10 @@ video2gif() {
 
 edit() {
   code $(fzf)
+}
+
+editm() {
+  micro $(fzf)
 }
 
 cdd() {
