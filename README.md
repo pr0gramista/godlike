@@ -34,3 +34,4 @@ Bunch of command examples I usually forget after a while...
 - [Flutter - generate code coverage with filtering](https://gist.github.com/pr0gramista/e6d19eb26dbbf39c82f500f7a7df052f)
 - [Transfering a lot of files easily](https://gist.github.com/pr0gramista/081ed0079dde7c338bc55b23f9202fbf)
 - [Infinite loop in bash](https://gist.github.com/pr0gramista/98fdad7535b9055b8405fa85463d199e)
+- [Run tests or something multiple times and count results](https://gist.github.com/pr0gramista/7c47bcca33d7de21d974a7846744d70e)
