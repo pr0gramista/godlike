@@ -104,6 +104,11 @@ plugins=(
 # git clone https://github.com/MichaelAquilina/zsh-you-should-use.git $ZSH_CUSTOM/plugins/you-should-use
 plugins=(you-should-use $plugins)
 
+# To install
+# git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
+plugins=(zsh-autosuggestions $plugins)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
