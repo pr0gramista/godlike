@@ -2,6 +2,10 @@
 ```
 defaults write com.apple.Finder AppleShowAllFiles YES
 sudo softwareupdate --install-rosetta --agree-to-license
+sudo gem install cocoapods
+# The default version of Ruby requires sudo to install the CocoaPods gem. If you are using a Ruby Version manager, you might need to run without sudo.
+# Fir for M1s
+sudo gem uninstall ffi && sudo gem install ffi -- --enable-libffi-alloc
 ```
 
 # User snippets
