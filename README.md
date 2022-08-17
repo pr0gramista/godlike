@@ -14,6 +14,7 @@ Things I use more or less.
 - [httpx](https://github.com/encode/httpx/)
 - [Snapdrop](https://snapdrop.net)
 - [micro](https://github.com/zyedidia/micro)
+- [jc](https://github.com/kellyjonbrazil/jc)
 
 ## Most important configs
 - [.zshrc](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/.zshrc)
