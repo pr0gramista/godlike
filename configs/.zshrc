@@ -222,3 +222,8 @@ mongo4_up() {
 exitcode() {
   echo $?
 }
+
+helpbook() {
+  cd ~/Projekty/godlike-scripts/help_book && code $(fzf)
+}
+
