@@ -4,9 +4,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Flutter
+# Tools
+# Put Flutter SDK and Google Cloud SDK over there
+export PATH="$PATH":"$HOME/tools"
 export PATH="$PATH":"$HOME/tools/flutter/bin"
 export PATH="$PATH":"$HOME/tools/flutter/.pub-cache/bin"
+export PATH="$PATH":"$HOME/tools/google-cloud-sdk/bin"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -202,4 +205,20 @@ cdd() {
 
 pro() {
   cd ~/Projekty
+}
+
+postgres_up() {
+  docker run --rm -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres:14
+}
+
+redis_up() {
+  docker run --rm -p 6379:6379 redis:7
+}
+
+mongo4_up() {
+  docker run --rm -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin -p 27017:27017 mongo:4.4
+}
+
+exitcode() {
+  echo $?
 }
