@@ -36,3 +36,4 @@ Bunch of command examples I usually forget after a while...
 - [Transfering a lot of files easily](https://gist.github.com/pr0gramista/081ed0079dde7c338bc55b23f9202fbf)
 - [Infinite loop in bash](https://gist.github.com/pr0gramista/98fdad7535b9055b8405fa85463d199e)
 - [Run tests or something multiple times and count results](https://gist.github.com/pr0gramista/7c47bcca33d7de21d974a7846744d70e)
+- [launch.json with debug terminal](https://gist.github.com/pr0gramista/8b6fc5172f81f9c2edac2223f0f79237)
