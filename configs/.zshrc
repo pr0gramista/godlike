@@ -5,11 +5,16 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Tools
-# Put Flutter SDK and Google Cloud SDK over there
-export PATH="$PATH":"$HOME/tools"
 export PATH="$PATH":"$HOME/tools/flutter/bin"
 export PATH="$PATH":"$HOME/tools/flutter/.pub-cache/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$PATH":"$HOME/tools"
 export PATH="$PATH":"$HOME/tools/google-cloud-sdk/bin"
+
+# Python stufff
+export PATH="$PATH":"$HOME/Library/Python/3.9/bin"
+
+source ~/.zshsecretrc
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -200,11 +205,11 @@ editm() {
 }
 
 cdd() {
-  cd $(find . -type d -print | fzf)
+  z $(find . -type d -print | fzf)
 }
 
 pro() {
-  cd ~/Projekty
+  z ~/Projekty
 }
 
 postgres_up() {
@@ -219,11 +224,34 @@ mongo4_up() {
   docker run --rm -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=admin -p 27017:27017 mongo:4.4
 }
 
+# Returns exit code of the last command
 exitcode() {
   echo $?
 }
 
 helpbook() {
-  cd ~/Projekty/godlike-scripts/help_book && code $(fzf)
+  code $(find ~/Projekty/godlike-scripts/help_book -print | fzf)
 }
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+
+# Wasmer
+export WASMER_DIR="/Users/r/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+# Broot - can be removed
+source /Users/r/.config/broot/launcher/bash/br
+
+RED='\033[0;31m'
+BLUE='\033[0;34m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LCYAN='\033[1;36m' # Light Cyan
+NC='\033[0m' # No Color
+
+echo "Hey! Remember about ${PURPLE}z${NC} ${PURPLE}edit${NC} ${PURPLE}cdd${NC} ${PURPLE}helpbook${NC} ${LCYAN}cdf${NC} ${LCYAN}pfd${NC} ${YELLOW}pp_json${NC} ${YELLOW}e64${NC} ${YELLOW}d64${NC} ${RED}br${NC}"
