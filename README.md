@@ -15,6 +15,7 @@ Things I use more or less.
 - [Snapdrop](https://snapdrop.net)
 - [micro](https://github.com/zyedidia/micro)
 - [jc](https://github.com/kellyjonbrazil/jc)
+- [broot](https://dystroy.org/broot) - `cargo install broot --locked`
 
 ## Most important configs
 - [.zshrc](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/.zshrc)
