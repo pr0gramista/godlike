@@ -10,6 +10,7 @@ export PATH="$PATH":"$HOME/tools/flutter/.pub-cache/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH":"$HOME/tools"
 export PATH="$PATH":"$HOME/tools/google-cloud-sdk/bin"
+export PATH="$PATH":"$HOME/Library/Android/sdk/platform-tools"
 
 # Python stufff
 export PATH="$PATH":"$HOME/Library/Python/3.9/bin"
