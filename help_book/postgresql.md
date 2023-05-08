@@ -16,10 +16,18 @@ psql
 
 // List tables
 \dt
+```
 
-// Set password
+```sql
+# Set password
 ALTER USER username WITH PASSWORD 'password';
 
-// Creating user
+# Creating user
 CREATE USER wow WITH PASSWORD 'securepassword';
+
+# Select elements from `files` table where JSONB `metadata` field is not empty or null
+# More functions: https://www.postgresql.org/docs/9.3/functions-json.html
+SELECT * FROM public.files
+WHERE json_array_length("metadata"->'errors') > 1
+LIMIT 1;
 ```
