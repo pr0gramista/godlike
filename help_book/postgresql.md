@@ -5,6 +5,9 @@ sudo -i -u postgres
 // Enter SQL
 psql
 
+// Run file with SQL commands using psql
+psql -h localhost -U postgres -f my_sql_file
+
 // Help for psql
 \?
 
