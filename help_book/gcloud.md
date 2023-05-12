@@ -25,6 +25,9 @@ docker push gcr.io/my-project/my-app:0.0.1
 
 gcloud run deploy my-app --image=gcr.io/my-project/my-app:0.0.1  
 
+# Sometimes required when "invalid_grant" errors appear
+gcloud auth application-default login
+
 ```
 Cloud Build
 ```
