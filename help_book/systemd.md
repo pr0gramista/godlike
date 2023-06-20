@@ -46,3 +46,19 @@ When you are happy that this starts and stops your app, you can have it start au
 sudo systemctl enable myscript.service
 ```
 The systemctl command can also be used to restart the service or disable it from boot up.
+
+# Adding environment variables
+[Source](https://serverfault.com/questions/413397/how-to-set-environment-variable-in-systemd-service)
+
+```shell
+sudo systemctl edit myscript
+```
+
+Add variables at the top:
+```
+[Service]
+Environment="PORT=80"
+Environment="SOMETHING=something"
+```
+
+Save & reload.
