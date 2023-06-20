@@ -17,4 +17,7 @@ show tables
 db.users.find({ id: "X9oY2dFJZsb8OS9BCXYWHt0PlTD3" })
 db.contents.find({ ownerId: "X9oY2dFJZsb8OS9BCXYWHt0PlTD3" })
 db.contents.deleteMany({})
+
+# You can use JavaScript things
+JSON.stringify(db.contents.findOne({}))
 ```
