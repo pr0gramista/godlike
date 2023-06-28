@@ -234,6 +234,14 @@ helpbook() {
   code $(find ~/Projekty/godlike-scripts/help_book -print | fzf)
 }
 
+# exa -R - recursive ls, kind of like tree or br(oot)
+
+# cargo install bat --locked
+# cargo install exa --locked
+# cargo install broot --locked
+alias cat=bat  
+alias ls=exa
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
