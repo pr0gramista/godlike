@@ -13,6 +13,9 @@ echo {"hello": "me"} | jq -r .hello
 # Redo command with sudo
 sudo !!
 
+# Copy files over ssh
+scp -r /path/to/local/dir user@host:/path/to/remote/dir
+
 # Background jobs (Ctrl+Z to go background)
 jobs
 bg [job_number]
