@@ -163,7 +163,7 @@ nocorschrome() {
 
 # Aliases for setting local Git email to work one
 gitwork() {
-  git config user.email "bartosz.wisniewski@arcsoftware.it"
+  git config user.email "bartosz.wisniewski@turbofuro.com"
 }
 
 gitsetup() {
