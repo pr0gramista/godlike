@@ -22,6 +22,10 @@
     "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
   },
   {
+    "key": "ctrl+shift+alt+cmd+r",
+    "command": "workbench.action.terminal.runSelectedText",
+  },
+  {
     "key": "tab",
     "command": "-editor.emmet.action.expandAbbreviation",
     "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
@@ -91,7 +95,7 @@
     "command": "expand_region"
   },
   {
-    "key": "cmd+[IntlBackslash]",
+    "key": "alt+[IntlBackslash]",
     "command": "workbench.action.closeActiveEditor"
   },
   {
