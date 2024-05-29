@@ -1,5 +1,39 @@
-# Lovely scripts and configs 🎉
+# 🎉 My lovely scripts, snippets, configs and god knows what else 🎉
 Things I use more or less.
+
+## Bunch of emojis I am too lazy to use
+💛✨😅🫡🚀💀✨😼😎🪄🇵🇱🔥🎉🐷⚡️❤️🤖👋🤔🦀😼🍻💙🧪🧠✅🚨❌⚠️🚩
+
+Happy kaomoji    
+(=^ ◡ ^=)     
+(=`ω´=)     
+( =ω=)..nyaa     
+(o･ω･o)     
+(＾◡＾)     
+(✯◡✯)     
+\(★ω★)/   
+٩(◕‿◕｡)۶    
+(☆ω☆)     
+
+Not happy   
+(￢_￢;)    
+٩(╬ʘ益ʘ╬)۶    
+∩┐(◣_◢)┌∩┐     
+(｡╯︵╰｡)     
+(x_x)    
+(¬_¬ )   
+
+Apologizing    
+(*_ _)人    
+
+Other   
+(╯°益°)╯彡┻━┻	   
+(－‸ლ)	
+‿︵‿︵‿︵‿ヽ(°□° )ノ︵‿︵‿︵‿︵	   
+┬─┬ノ( º _ ºノ)	    
+(ಠ_ಠ)	   
+(ʘ ͟ʖ ʘ)     
+( ͠° ͟ʖ ͡°)	   
 
 ## Great software to use
 - [ffmpeg](https://www.ffmpeg.org)
@@ -23,10 +57,10 @@ Things I use more or less.
 - [vscode.json](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/vscode.json)
 - [keybindings.json](https://github.com/pr0gramista/godlike-scripts/blob/master/configs/keybindings.json)
 
-#### [Help book](https://github.com/pr0gramista/godlike-scripts/tree/master/help_book)
+## [Help book](https://github.com/pr0gramista/godlike-scripts/tree/master/help_book)
 Bunch of command examples I usually forget after a while...
 
-#### Gist section
+## Gist section
 - [Abstraction over some API in Go](https://gist.github.com/pr0gramista/ad508abcaeccc4a00051e607897ea6e7)
 - [Mock API - serving JSON files in Go](https://gist.github.com/pr0gramista/69f01e2c720ecf2955bba239218c0f8d)
 - [Reverse proxy in Go using Gin](https://gist.github.com/pr0gramista/967836d17c7019c0556ee61dd6a9d5ca)
