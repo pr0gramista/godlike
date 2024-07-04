@@ -1,5 +1,5 @@
 # Docker
-Commands
+## Commands
 ```
 # Build, notice the dot at the end
 docker build -t name_of_image .
@@ -47,7 +47,7 @@ dcb; dcup; dcdn
 # Docker run and expose all EXPOSE ports
 docker run -P my_app
 ```
-Example Dockerfile (notice no extension)
+## Example Dockerfile (notice no extension)
 
 Basic Python 3
 ```
@@ -92,3 +92,21 @@ USER nonroot:nonroot
 
 ENTRYPOINT ["/app"]
 ```
+
+## Install on Raspberry Pi
+```
+curl -sSL https://get.docker.com | sh
+sudo apt-get install -y uidmap
+dockerd-rootless-setuptool.sh install
+
+# Add to ~/.bashrc
+export PATH=/usr/bin:$PATH
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
+
+# This showed up after:
+# [INFO] Installed docker.service successfully.
+# [INFO] To control docker.service, run: `systemctl --user (start|stop|restart) docker.service`
+# [INFO] To run docker.service on system startup, run: `sudo loginctl enable-linger caveman`
+```
+
+[Source](https://raspberrytips.com/docker-on-raspberry-pi/)
