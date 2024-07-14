@@ -73,3 +73,4 @@ Bunch of command examples I usually forget after a while...
 - [Run tests or something multiple times and count results](https://gist.github.com/pr0gramista/7c47bcca33d7de21d974a7846744d70e)
 - [launch.json with debug terminal](https://gist.github.com/pr0gramista/8b6fc5172f81f9c2edac2223f0f79237)
 - [Remove files in subdirectories with a given file extension](https://gist.github.com/pr0gramista/7b94eb505449f1d6ecfea24f38cf17ef)
+- [Macro with doctest in Rust](https://gist.github.com/pr0gramista/a07ef4c0ba7567d9a7b440705587684f)
