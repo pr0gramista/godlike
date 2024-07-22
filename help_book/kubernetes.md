@@ -42,8 +42,12 @@ kubectl exec -it pod/ubuntu-pod -- /bin/bash
 ```
 Install my basic tools and send some request
 ```
+apt update
 apt install -y python3-pip build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget curl micro dnsutils
 pip install 'httpx[cli]' --break-system-packages
+```
+Send a request
+```
 ls /var/run/secrets/kubernetes.io/serviceaccount
 cat /var/run/secrets/kubernetes.io/serviceaccount/token # Show token
 echo $KUBERNETES_SERVICE_HOST
