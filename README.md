@@ -67,6 +67,7 @@ Bunch of command examples I usually forget after a while...
 - [Postman Firebase Auth Pre-request script](https://gist.github.com/pr0gramista/0b3060221e558f1875dbb6d569baa89e)
 - [Clean all Flutter project in current directory](https://gist.github.com/pr0gramista/5a0c66de6585a75ec06aadcd837e65e8)
 - [Clean all node_modules in current directory](https://gist.github.com/pr0gramista/b883fb45011e72daa35a92640860f33d)
+- [Clean all Rust projects in current directory](https://gist.github.com/pr0gramista/1baca0d56850f3a336c3799736a6ca79)
 - [Flutter - generate code coverage with filtering](https://gist.github.com/pr0gramista/e6d19eb26dbbf39c82f500f7a7df052f)
 - [Transfering a lot of files easily](https://gist.github.com/pr0gramista/081ed0079dde7c338bc55b23f9202fbf)
 - [Infinite loop in bash](https://gist.github.com/pr0gramista/98fdad7535b9055b8405fa85463d199e)
