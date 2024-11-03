@@ -109,6 +109,7 @@ plugins=(
   git-prompt
   encode64 # Adds e64, d64
   z
+  kubectl
   jsontools # Adds pp_json, urlencode_json, is_json
 )
 
@@ -245,6 +246,10 @@ helpbook() {
 alias cat=bat  
 alias ls=exa
 
+latest() {
+  ls -s date -l
+}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -266,4 +271,4 @@ CYAN='\033[0;36m'
 LCYAN='\033[1;36m' # Light Cyan
 NC='\033[0m' # No Color
 
-echo "Hey! Remember about ${PURPLE}z${NC} ${PURPLE}edit${NC} ${PURPLE}cdd${NC} ${PURPLE}helpbook${NC} ${LCYAN}cdf${NC} ${LCYAN}pfd${NC} ${YELLOW}pp_json${NC} ${YELLOW}e64${NC} ${YELLOW}d64${NC} ${RED}br${NC}"
+echo "Hey! Remember about ${PURPLE}latest${NC} ${PURPLE}z${NC} ${PURPLE}edit${NC} ${PURPLE}cdd${NC} ${PURPLE}helpbook${NC} ${LCYAN}cdf${NC} ${LCYAN}pfd${NC} ${YELLOW}pp_json${NC} ${YELLOW}e64${NC} ${YELLOW}d64${NC} ${RED}br${NC}"
