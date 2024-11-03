@@ -1,5 +1,4 @@
 {
-  "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "Cascadia Code",
   "editor.fontLigatures": true,
@@ -27,12 +26,11 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false
+    "editor.wordBasedSuggestions": "off"
   },
   "terminal.external.osxExec": "/bin/zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "dart.previewFlutterUiGuides": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
   "dart.debugSdkLibraries": true,
   "workbench.editorAssociations": {
@@ -43,18 +41,36 @@
   },
   "editor.bracketPairColorization.enabled": true,
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true
   },
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": true,
-    "markdown": true
+    "*": false,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "yaml": false
   },
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.smoothScrolling": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "dart.flutterSdkPath": "/Users/r/tools/flutter",
+  "eslint.alwaysShowStatus": true,
+  "eslint.lintTask.enable": true,
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.renderCharacters": false,
+  "editor.fontWeight": "normal",
+  "[mjml]": {
+    "editor.defaultFormatter": "attilabuti.vscode-mjml"
+  },
+  "deno.path": "/opt/homebrew/bin/deno",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "workbench.colorTheme": "Tomorrow Night Blue",
+  "vscode_custom_css.imports": ["file:///Users/r/Downloads/index.js"]
 }
