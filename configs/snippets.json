@@ -15,6 +15,33 @@
   // 	],
   // 	"description": "Log output to console"
   // }
+  "Rust/Test function": {
+    "scope": "rust",
+    "prefix": "mtest",
+    "description": "Make test function",
+    "body": ["#[test]", "fn test_$1() {", "    $2", "}"]
+  },
+  "Rust/Test module": {
+    "scope": "rust",
+    "prefix": "mtestm",
+    "description": "Make test module",
+    "body": [
+      "#[cfg(test)]",
+      "mod test_${1:super} {",
+      "    ${2:use super::*;}\n",
+      "    #[test]",
+      "    fn test_$3() {",
+      "        $4",
+      "    }\n}"
+    ]
+  },
+  "Line": {
+    "prefix": "line",
+    "body": [
+      "--------------------------------------------------------------------------------"
+    ],
+    "description": "Create line"
+  },
   "Lorem one": {
     "prefix": "lorem1",
     "body": [
@@ -129,79 +156,17 @@
     "body": ["const $1 = ({ $2 }) => (<div>$3</div>);"],
     "description": "Make component function"
   },
-  "Functional component template": {
-    "scope": "javascript,javascriptreact",
-    "prefix": "tfc",
-    "body": [
-      "import React from 'react';",
-      "import styles from './index.module.scss';",
-      "",
-      "const $1 = ({ $2 }) => {",
-      "  return (<div className={styles.root}>$1</div>);",
-      "}",
-      "",
-      "export default $1"
-    ],
-    "description": "Functional component template"
-  },
-  "Functional React Native component template": {
-    "scope": "javascript,javascriptreact",
-    "prefix": "tfcrn",
-    "body": [
-      "import React from 'react';",
-      "import styled from 'styled-components/native';",
-      "",
-      "const StyledView = styled.View`",
-      "  background-color: red;",
-      "`",
-      "",
-      "const $1 = ({ $2 }) => {",
-      "  return (<StyledView>$1</StyledView>);",
-      "}",
-      "",
-      "export default $1"
-    ],
-    "description": "Functional component template"
-  },
   "Functional component template TS": {
     "scope": "typescript,typescriptreact",
     "prefix": "tfc",
     "body": [
-      "import React from 'react';",
-      "import styles from './index.module.scss';",
-      "",
-      "export interface $1Props {",
+      "export type $1Props = {",
       "",
       "}",
       "",
-      "const $1 = ({ $2 } : $1Props) => {",
-      "  return (<div className={styles.root}>$1</div>);",
-      "}",
-      "",
-      "export default $1"
-    ],
-    "description": "Functional component template"
-  },
-  "Functional React Native component template TS": {
-    "scope": "typescript,typescriptreact",
-    "prefix": "tfcrn",
-    "body": [
-      "import React from 'react';",
-      "import styled from 'styled-components/native';",
-      "",
-      "const StyledView = styled.View`",
-      "  background-color: red;",
-      "`",
-      "",
-      "export interface $1Props {",
-      "",
-      "}",
-      "",
-      "const $1 = ({ $2 } : $1Props) => {",
-      "  return (<StyledView>$1</StyledView>);",
-      "}",
-      "",
-      "export default $1"
+      "export default function $1({ $2 } : $1Props) {",
+      "  return <div>$1</div>;",
+      "}"
     ],
     "description": "Functional component template"
   },
@@ -306,6 +271,12 @@
     ],
     "description": "useState"
   },
+  "useAppDispatch": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "cdispatch",
+    "body": ["const dispatch = useAppDispatch();"],
+    "description": "useState"
+  },
   "React Native": {
     "scope": "javascript,typescript,typescriptreact,javascriptreact",
     "prefix": "mrn",
@@ -346,7 +317,6 @@
       "import { render } from '@testing-library/react';",
       "import { createMemoryHistory } from 'history';",
       "import $1, { $1Props } from '../';",
-
       "describe('$1', () => {",
       "  const history = createMemoryHistory();",
       "  const defaultProps = {};",
