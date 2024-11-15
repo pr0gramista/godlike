@@ -8,13 +8,21 @@ sudo gem install cocoapods
 sudo gem uninstall ffi && sudo gem install ffi -- --enable-libffi-alloc
 ```
 
+## Key Repeat
+```
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+```
+Logout and login again to apply changes.
+
 # User snippets
 Now all in [./snippets.json]
 
 # VSCode cool keyboard shortcuts
 ```
-CMD + § - Close active editor
+Option + § - Close active editor
 CMD + . - Open Quick fix
+CMD + I - Show on hover
 CMD + E - Search everywhere/commands
 CMD + W - Expand selection
 CMD + T - Switch terminal
@@ -25,6 +33,8 @@ CMD + 2 - Focus first editor
 CMD + 3 - Focus second editor (splits screen)
 CMD + [ - Fold
 CMD + ] - Unfold
+F1 - Go to next problem
+```
 
 CMD + Shift + . - Move to... (symbol in file)
 
