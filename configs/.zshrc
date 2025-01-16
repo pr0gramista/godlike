@@ -162,19 +162,19 @@ nocorschrome() {
   open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
 }
 
-# Aliases for setting local Git email to work one
-gitwork() {
-  git config user.email "bartosz.wisniewski@turbofuro.com"
-}
-
 gitsetup() {
   git config --global user.email "kontakt@pr0gramista.pl"
   git config --global user.name "Bartosz Wiśniewski"
   git config --global core.editor micro
 }
 
-gitworkamend() {
-  git commit --amend --author="Bartosz Wiśniewski <bartosz.wisniewski@arcsoftware.it>"
+# Aliases for setting local Git email to turbofuro one
+gitturbo() {
+  git config user.email "bartosz.wisniewski@turbofuro.com"
+}
+
+gitturboamend() {
+  git commit --amend --author="Bartosz Wiśniewski <bartosz.wisniewski@turbofuro.com>"
 }
 
 # Undo last commit
@@ -236,6 +236,11 @@ exitcode() {
 
 helpbook() {
   code $(find ~/Projekty/godlike-scripts/help_book -print | fzf)
+}
+
+# Sometimes when you have C and Rust mixed together, the default flags set by Rust can corrupt the C build process
+rustcfix() {
+  export CRATE_CC_NO_DEFAULTS=1
 }
 
 # exa -R - recursive ls, kind of like tree or br(oot)
