@@ -34,7 +34,6 @@ CMD + 3 - Focus second editor (splits screen)
 CMD + [ - Fold
 CMD + ] - Unfold
 F1 - Go to next problem
-```
 
 CMD + Shift + . - Move to... (symbol in file)
 
