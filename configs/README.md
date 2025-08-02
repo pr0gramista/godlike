@@ -8,6 +8,12 @@ sudo gem install cocoapods
 sudo gem uninstall ffi && sudo gem install ffi -- --enable-libffi-alloc
 ```
 
+### Allow any apps
+```
+sudo spctl --master-enable
+```
+Then in Privacy & Security change field from App Store and trusted developers to anyone
+
 ## Key Repeat
 ```
 defaults write -g InitialKeyRepeat -int 10
