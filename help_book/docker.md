@@ -110,3 +110,7 @@ export DOCKER_HOST=unix:///run/user/1000/docker.sock
 ```
 
 [Source](https://raspberrytips.com/docker-on-raspberry-pi/)
+
+
+## Post install for root access
+https://docs.docker.com/engine/install/linux-postinstall/
