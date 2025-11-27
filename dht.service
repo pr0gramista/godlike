@@ -1,0 +1,14 @@
+[Unit]
+Description=DHT sensor
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python dht.py
+WorkingDirectory=/home/caveman
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=caveman
+
+[Install]
+WantedBy=multi-user.target
