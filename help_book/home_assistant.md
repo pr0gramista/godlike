@@ -20,3 +20,24 @@ The app should be ready to setup at port 8123.
 
 ## Configuration
 Home Assistant will create `configuration.yaml` file in the config directory.
+
+## Debug
+Run bash inside container
+```
+docker exec -it homeassistant bash
+```
+
+## Using File device
+Considering JSON file `{"temperature": 26, "humidity": 44}` (dht.json).
+
+The value template is:
+```
+{{ value_json.temperature }}
+```
+
+In configuration.yaml I added, but not sure if that is necessary.
+```
+homeassistant:
+  allowlist_external_dirs:
+    - "/config"
+```
