@@ -1,428 +1,395 @@
 {
-  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
-  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
-  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
-  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
-  // Placeholders with the same ids are connected.
-  // Example:
-  // "Print to console": {
-  // 	"scope": "javascript,typescript",
-  // 	"prefix": "log",
-  // 	"body": [
-  // 		"console.log('$1');",
-  // 		"$2"
-  // 	],
-  // 	"description": "Log output to console"
-  // }
-  "Rust/Test function": {
-    "scope": "rust",
-    "prefix": "mtest",
-    "description": "Make test function",
-    "body": ["#[test]", "fn test_$1() {", "    $2", "}"]
-  },
-  "Rust/Test module": {
-    "scope": "rust",
-    "prefix": "mtestm",
-    "description": "Make test module",
-    "body": [
-      "#[cfg(test)]",
-      "mod test_${1:super} {",
-      "    ${2:use super::*;}\n",
-      "    #[test]",
-      "    fn test_$3() {",
-      "        $4",
-      "    }\n}"
-    ]
-  },
-  "Line": {
-    "prefix": "line",
-    "body": [
-      "--------------------------------------------------------------------------------"
-    ],
-    "description": "Create line"
-  },
-  "Lorem one": {
-    "prefix": "lorem1",
-    "body": [
-      "Lorem ipsum dolor sit amet, per no tota corrumpit intellegam, ex per quas nostrud corrumpit. Ea alii sale interesset sed, ut graece liberavisse nam. Repudiare incorrupte an vim, est ei case facete indoctum. Ei dicit doming partiendo per, ei detraxit quaerendum liberavisse vim, omnes rationibus ei cum. Ut mei explicari comprehensam definitionem."
-    ],
-    "description": "Lorem ipsum"
-  },
-  "Lorem two": {
-    "prefix": "lorem2",
-    "body": [
-      "Id ius vide dissentiet, autem solet interpretaris ea duo, in ius justo altera atomorum. Facilisis mnesarchum no ius. Aperiri convenire accusamus sit ei. Eu sea vituperata philosophia. No pro ludus recusabo atomorum."
-    ],
-    "description": "Id ius vide dissentiet"
-  },
-  "Lorem three": {
-    "prefix": "lorem3",
-    "body": [
-      "Ea eam rebum etiam disputationi, cum no molestie neglegentur. Eos ad veritus consetetur philosophia. Cu cum tollit vivendo rationibus. Zril veniam insolens eum in, an vero solum clita eum. Vel wisi pertinacia te, ad everti detracto persequeris per, cu eos munere omnesque. Eu cum choro denique, putent suavitate omittantur an ius, veri congue tantas nam an."
-    ],
-    "description": "Ea eam rebum etiam disputationi"
-  },
-  "Lorem long": {
-    "prefix": "loremlong",
-    "body": [
-      "You can't train kids in a world where adults have no concept of what science literacy is. The adults are gonna squash the creativity that would manifest itself, because they're clueless about what it and why it matters. But science can always benefit from the more brains there are that are thinking about it - but that's true for any field.\n\nYou will never find scientists leading armies into battle. You just won't. Especially not astrophysicists - we see the biggest picture there is. We understand how small we are in the cosmos. We understand how fragile and temporary our existence is here on Earth\n\nIf you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks. And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.\n\nHumans aren't as good as we should be in our capacity to empathize with feelings and thoughts of others, be they humans or other animals on Earth. So maybe part of our formal education should be training in empathy. Imagine how different the world would be if, in fact, that were 'reading, writing, arithmetic, empathy.\n\nThere is no science in this world like physics. Nothing comes close to the precision with which physics enables you to understand the world around you. It's the laws of physics that allow us to say exactly what time the sun is going to rise. What time the eclipse is going to begin. What time the eclipse is going to end.\n\nKids should be allowed to break stuff more often. That's a consequence of exploration. Exploration is what you do when you don't know what you're doing. That's what scientists do every day.\n\nAlthough I'm not actually embarrassed by this, I tend not to read books that have awesome movies made from them, regardless of how well or badly the movie represented the actual written story.\n\nOne of the greatest features of science is that it doesn't matter where you were born, and it doesn't matter what the belief systems of your parents might have been: If you perform the same experiment that someone else did, at a different time and place, you'll get the same result.\n\nFor me at age 11, I had a pair of binoculars and looked up to the moon, and the moon wasn't just bigger, it was better. There were mountains and valleys and craters and shadows. And it came alive."
-    ],
-    "description": "Neil deGrasse Tyson Ipsum"
-  },
-  "Print dir to console": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "dir",
-    "body": ["console.dir('$1');", "$2"],
-    "description": "Log output to console"
-  },
-  "Name log": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "nlog",
-    "body": ["console.log('$1', $1);"],
-    "description": "Log output to console"
-  },
-  "Loggin' map": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "maplog",
-    "body": [".map(a => { console.log(a); return a; })"],
-    "description": "Log array to console"
-  },
-  "Arrow function": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "afunc",
-    "body": ["($1) => $2"],
-    "description": "Create arrow function"
-  },
-  "ESLint disable": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "eslintd",
-    "body": ["// eslint-disable-line $1"],
-    "description": "Disable ESLint on this line"
-  },
-  "Import prop types": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "iprop",
-    "body": ["import PropTypes from 'prop-types';"],
-    "description": "Imports PropTypes for React"
-  },
-  "Import router prop types": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "irouterprop",
-    "body": ["import ReactRouterPropTypes from 'react-router-prop-types';"],
-    "description": "Imports ReactRouterPropTypes for React"
-  },
-  "Import from lodash": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "ilodash",
-    "body": ["import $1 from 'lodash/$1';"],
-    "description": "Imports something from lodash"
-  },
-  "Import from components": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "icomponent",
-    "body": ["import $1 from 'components/$1';"],
-    "description": "Imports something from components (fractal structure)"
-  },
-  "Import from utils": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "iutils",
-    "body": ["import $1 from 'utils/$1';"],
-    "description": "Imports something from utils (fractal structure)"
-  },
-  "Test stub": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "mbigtest",
-    "body": ["describe('$1', () => {\n  it('$2', () => {\n    $0\n  });\n});"],
-    "description": "Make test stub"
-  },
-  "Test case": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "mtest",
-    "body": ["it('$1', () => {\n    $0\n  });"],
-    "description": "Make test case stub"
-  },
-  "Test parameterized case": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "mparamtest",
-    "body": [
-      "it.each([[1, false], [2, true], [3, false]])('$1', (value, isOK) => {\n    $0\n  });"
-    ],
-    "description": "Make test case stub"
-  },
-  "Functional component": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "mfcomponent",
-    "body": ["const $1 = ({ $2 }) => (<div>$3</div>);"],
-    "description": "Make component function"
-  },
-  "Functional component template TS": {
-    "scope": "typescript,typescriptreact",
-    "prefix": "tfc",
-    "body": [
-      "export type $1Props = {",
-      "",
-      "}",
-      "",
-      "export default function $1({ $2 } : $1Props) {",
-      "  return <div>$1</div>;",
-      "}"
-    ],
-    "description": "Functional component template"
-  },
-  "Component": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "mcomponent",
-    "body": [
-      "class $1 extends React.PureComponent {\n  render() {\n  $0\n  }\n}"
-    ],
-    "description": "Make component function"
-  },
-  "Import React": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "ireact",
-    "body": ["import React from 'react';"],
-    "description": "Import React"
-  },
-  "Import Redux FUUUUUU": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "iredux",
-    "body": [
-      "import { connect } from 'react-redux';",
-      "import { bindActionCreators } from 'redux';"
-    ],
-    "description": "Make component function"
-  },
-  "Make map to state, dispatch Redux": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "mredux",
-    "body": [
-      "const mapStateToProps = state => ({ $1 })",
-      "",
-      "const mapDispatchToProps = dispatch => bindActionCreators(Creators, dispatch);",
-      "",
-      "export default connect(mapStateToProps, mapDispatchToProps)($2);"
-    ],
-    "description": "Make component function"
-  },
-  "Require": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "req",
-    "body": ["const $1 = require('$2');"],
-    "description": "Require"
-  },
-  "Import index CSS module": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "icss",
-    "body": ["import styles from './index.module.css';"],
-    "description": "Import index.module.css"
-  },
-  "Import index SCSS module": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "iscss",
-    "body": ["import styles from './index.module.scss';"],
-    "description": "Import index.module.scss"
-  },
-  "Import classnames": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "icn",
-    "body": ["import cn from 'classnames';"],
-    "description": "Import classnames"
-  },
-  "className to styles": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "cstyle",
-    "body": ["className={styles.$1}"],
-    "description": "className={styles.wow}"
-  },
-  "Placeholder component": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "mpc",
-    "body": [
-      "import React from 'react'",
-      "",
-      "export default () => <div>Test</div>"
-    ],
-    "description": "Placeholder component"
-  },
-  "export default": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
-    "prefix": "cexport",
-    "body": ["export default $0"],
-    "description": "export default"
-  },
-  "useCallback": {
-    "scope": "javascript,javascriptreact,typescript,typescriptreact",
-    "prefix": "ccallback",
-    "body": ["useCallback(($1) => $0, [])"],
-    "description": "useCallback"
-  },
-  "useState": {
-    "scope": "javascript,javascriptreact",
-    "prefix": "cstate",
-    "body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState()"],
-    "description": "useState"
-  },
-  "useState TypeScript": {
-    "scope": "typescript,typescriptreact",
-    "prefix": "cstate",
-    "body": [
-      "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState<$2 | undefined>()"
-    ],
-    "description": "useState"
-  },
-  "useAppDispatch": {
-    "scope": "typescript,typescriptreact",
-    "prefix": "cdispatch",
-    "body": ["const dispatch = useAppDispatch();"],
-    "description": "useState"
-  },
-  "React Native": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "mrn",
-    "body": ["import { View, StyleSheet, Text } from 'react-native'"],
-    "description": "Import react native basic components"
-  },
-  "Ant Design icon": {
-    "scope": "javascript,typescript,typescriptreact,javascriptreact",
-    "prefix": "ianticon",
-    "body": ["import { $1 } from '@ant-design/icons';"],
-    "description": "Import icon from Ant Design icons"
-  },
-  "Import flutter_bloc": {
-    "scope": "dart",
-    "prefix": "ibloc",
-    "body": ["import 'package:flutter_bloc/flutter_bloc.dart';"],
-    "description": "Import flutter_bloc"
-  },
-  "Import collection": {
-    "scope": "dart",
-    "prefix": "icoll",
-    "body": ["import 'package:collection/collection.dart';"],
-    "description": "Import collection for extensions"
-  },
-  "Create @override props - equatable": {
-    "scope": "dart",
-    "prefix": "cprops",
-    "body": ["@override", "List<Object> get props => [$1];"],
-    "description": "Override props getter"
-  },
-  "Test Stub component": {
-    "scope": "typescript,typescriptreact",
-    "prefix": "mtcomp",
-    "description": "Create component test stub",
-    "body": [
-      "import React from 'react';",
-      "import { Router } from 'react-router-dom';",
-      "import { render } from '@testing-library/react';",
-      "import { createMemoryHistory } from 'history';",
-      "import $1, { $1Props } from '../';",
-      "describe('$1', () => {",
-      "  const history = createMemoryHistory();",
-      "  const defaultProps = {};",
-      "",
-      "  const renderComponent = (props: Partial<$1Props>) =>",
-      "    render(",
-      "      <Router history={history}>",
-      "        <$1 {...defaultProps} {...props} />",
-      "      </Router>",
-      "    );",
-      "",
-      "  it('should have text', () => {",
-      "    const { getByText } = renderComponent({}});",
-      "",
-      "    expect(getByText(/Example/)).toBeInTheDocument();",
-      "  });",
-      "});"
-    ]
-  },
-  "Stateless Widget template": {
-    "scope": "dart",
-    "prefix": "tstateless",
-    "body": [
-      "import 'package:flutter/material.dart';",
-      "",
-      "class $1 extends StatelessWidget {",
-      "  const $1({Key? key}) : super(key: key);",
-      "",
-      "  @override",
-      "  Widget build(BuildContext context) {",
-      "    return SizedBox();",
-      "  }",
-      "}"
-    ],
-    "description": "Stateless Widget template"
-  },
-  "Cubit test": {
-    "scope": "dart",
-    "prefix": "tcubittest",
-    "body": [
-      "import 'package:flutter_test/flutter_test.dart';",
-      "",
-      "void main() {",
-      "  group('$1', () {",
-      "    late $1 cubit;",
-      "",
-      "    setUp(() {",
-      "      cubit = $1();",
-      "    });",
-      "",
-      "    test('initial state is XXX', () {",
-      "      expect(cubit.state, []);",
-      "    });",
-      "",
-      "    test('emits...', () {",
-      "      cubit.addDocument(\"Script\", \"Hello World!\");",
-      "",
-      "      expect(cubit.state[0].name, \"Script\");",
-      "      expect(cubit.state[0].text, \"Hello World!\");",
-      "      expect(cubit.state[0].id, isNotEmpty);",
-      "    });",
-      "  });",
-      "}"
-    ],
-    "description": "Cubit test template"
-  },
-  "Cubit Builder": {
-    "scope": "dart",
-    "prefix": "ccubitbuilder",
-    "body": [
-      "return BlocBuilder<$1Cubit, $1State>(builder: (context, state) {",
-      "  return SizedBox();",
-      "});"
-    ]
-  },
-  "Widget test": {
-    "scope": "dart",
-    "prefix": "twidgettest",
-    "body": [
-      "import 'package:flutter/material.dart';",
-      "import 'package:flutter_test/flutter_test.dart';",
-      "",
-      "import '../utils.dart';",
-      "",
-      "void main() {",
-      "  group('$1', () {",
-      "    testWidgets('can be found', (WidgetTester tester) async {",
-      "      const key = Key('my_widget');",
-      "",
-      "      await tester.pumpWidget(",
-      "        boilerplate(",
-      "          child: Column(",
-      "            children: [",
-      "              const Text(",
-      "                'Hello',",
-      "                key: key,",
-      "              ),",
-      "            ],",
-      "          ),",
-      "        ),",
-      "      );",
-      "",
-      "      expect(find.byKey(key), findsNothing);",
-      "    });",
-      "  });",
-      "}"
-    ]
-  }
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Rust/Test function": {
+		"scope": "rust",
+		"prefix": "mtest",
+		"description": "Make test function",
+		"body": [
+			"#[test]",
+			"fn test_$1() {",
+			"    $2",
+			"}"
+		]
+	},
+	"Rust/Test module": {
+		"scope": "rust",
+		"prefix": "mtestm",
+		"description": "Make test module",
+		"body": [
+			"#[cfg(test)]",
+			"mod test_${1:super} {",
+			"    ${2:use super::*;}\n",
+			"    #[test]",
+			"    fn test_$3() {",
+			"        $4",
+			"    }\n}"
+		]
+	},
+	"turbofuro_test": {
+		"scope": "rust",
+		"prefix": "turbofuro_test",
+		"body": [
+			"#[cfg(test)]",
+			"mod tests {",
+			"    use crate::executor::ExecutionTest;",
+			"    use super::*;",
+			"",
+			"    #[tokio::test]",
+			"    async fn test_() {",
+			"        let mut t = ExecutionTest::default();",
+			"        let mut context = t.get_context();",
+			"",
+			"    }",
+			"}",
+		]
+	},
+	"Line": {
+		"prefix": "line",
+		"body": [
+			"--------------------------------------------------------------------------------"
+		],
+		"description": "Create line"
+	},
+	"Lorem one": {
+		"prefix": "lorem1",
+		"body": [
+			"Lorem ipsum dolor sit amet, per no tota corrumpit intellegam, ex per quas nostrud corrumpit. Ea alii sale interesset sed, ut graece liberavisse nam. Repudiare incorrupte an vim, est ei case facete indoctum. Ei dicit doming partiendo per, ei detraxit quaerendum liberavisse vim, omnes rationibus ei cum. Ut mei explicari comprehensam definitionem."
+		],
+		"description": "Lorem ipsum"
+	},
+	"Lorem two": {
+		"prefix": "lorem2",
+		"body": [
+			"Id ius vide dissentiet, autem solet interpretaris ea duo, in ius justo altera atomorum. Facilisis mnesarchum no ius. Aperiri convenire accusamus sit ei. Eu sea vituperata philosophia. No pro ludus recusabo atomorum."
+		],
+		"description": "Id ius vide dissentiet"
+	},
+	"Lorem three": {
+		"prefix": "lorem3",
+		"body": [
+			"Ea eam rebum etiam disputationi, cum no molestie neglegentur. Eos ad veritus consetetur philosophia. Cu cum tollit vivendo rationibus. Zril veniam insolens eum in, an vero solum clita eum. Vel wisi pertinacia te, ad everti detracto persequeris per, cu eos munere omnesque. Eu cum choro denique, putent suavitate omittantur an ius, veri congue tantas nam an."
+		],
+		"description": "Ea eam rebum etiam disputationi"
+	},
+	"Lorem long": {
+		"prefix": "loremlong",
+		"body": [
+			"You can't train kids in a world where adults have no concept of what science literacy is. The adults are gonna squash the creativity that would manifest itself, because they're clueless about what it and why it matters. But science can always benefit from the more brains there are that are thinking about it - but that's true for any field.\n\nYou will never find scientists leading armies into battle. You just won't. Especially not astrophysicists - we see the biggest picture there is. We understand how small we are in the cosmos. We understand how fragile and temporary our existence is here on Earth\n\nIf you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks. And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.\n\nHumans aren't as good as we should be in our capacity to empathize with feelings and thoughts of others, be they humans or other animals on Earth. So maybe part of our formal education should be training in empathy. Imagine how different the world would be if, in fact, that were 'reading, writing, arithmetic, empathy.\n\nThere is no science in this world like physics. Nothing comes close to the precision with which physics enables you to understand the world around you. It's the laws of physics that allow us to say exactly what time the sun is going to rise. What time the eclipse is going to begin. What time the eclipse is going to end.\n\nKids should be allowed to break stuff more often. That's a consequence of exploration. Exploration is what you do when you don't know what you're doing. That's what scientists do every day.\n\nAlthough I'm not actually embarrassed by this, I tend not to read books that have awesome movies made from them, regardless of how well or badly the movie represented the actual written story.\n\nOne of the greatest features of science is that it doesn't matter where you were born, and it doesn't matter what the belief systems of your parents might have been: If you perform the same experiment that someone else did, at a different time and place, you'll get the same result.\n\nFor me at age 11, I had a pair of binoculars and looked up to the moon, and the moon wasn't just bigger, it was better. There were mountains and valleys and craters and shadows. And it came alive."
+		],
+		"description": "Neil deGrasse Tyson Ipsum"
+	},
+	"Print dir to console": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "dir",
+		"body": [
+			"console.dir('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"Name log": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "nlog",
+		"body": [
+			"console.log('$1', $1);"
+		],
+		"description": "Log output to console"
+	},
+	"Map logger": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "maplog",
+		"body": [
+			".map(a => { console.log(a); return a; })"
+		],
+		"description": "Log array to console"
+	},
+	"ESLint disable": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "eslintd",
+		"body": [
+			"// eslint-disable-line $1"
+		],
+		"description": "Disable ESLint on this line"
+	},
+	"Import from lodash": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "ilodash",
+		"body": [
+			"import $1 from 'lodash/$1';"
+		],
+		"description": "Imports something from lodash"
+	},
+	"Import from components": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "icomponent",
+		"body": [
+			"import $1 from '@/components/$1';"
+		],
+		"description": "Imports something from components (fractal structure)"
+	},
+	"Import from utils": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "iutils",
+		"body": [
+			"import $1 from 'utils/$1';"
+		],
+		"description": "Imports something from utils (fractal structure)"
+	},
+	"Test stub": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "testbig",
+		"body": [
+			"describe('$1', () => {\n  it('$2', () => {\n    $0\n  });\n});"
+		],
+		"description": "Make test stub"
+	},
+	"Test case": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "test",
+		"body": [
+			"it('$1', () => {\n    $0\n  });"
+		],
+		"description": "Make test case stub"
+	},
+	"Test parameterized case": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "testparam",
+		"body": [
+			"it.each([[1, false], [2, true], [3, false]])('$1', (value, isOK) => {\n    $0\n  });"
+		],
+		"description": "Make test case stub"
+	},
+	"Functional component template TS": {
+		"scope": "typescript,typescriptreact",
+		"prefix": "tfc",
+		"body": [
+			"export type $1Props = {",
+			"",
+			"}",
+			"",
+			"export const $1 = ({ $2 } : $1Props) => {",
+			"  return <div>$1</div>;",
+			"}"
+		],
+		"description": "Functional component template"
+	},
+	"Functional component (no props) template TS": {
+		"scope": "typescript,typescriptreact",
+		"prefix": "tfcnp",
+		"body": [
+			"export const $1 = () => {",
+			"  return <div>$1</div>;",
+			"}"
+		],
+		"description": "Functional component template"
+	},
+	"Functional component (wrapper) template TS": {
+		"scope": "typescript,typescriptreact",
+		"prefix": "tfcwrapper",
+		"body": [
+			"export type $1Props = React.PropsWithChildren & {",
+			"  className?: string;",
+			"}",
+			"",
+			"export const $1 = ({ children, className } : $1Props) => {",
+			"  return <div className={cn(\"\", className)}>{children}</div>;",
+			"}"
+		],
+		"description": "Functional component template"
+	},
+	"Import React": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "ireact",
+		"body": [
+			"import React from 'react';"
+		],
+		"description": "Import React"
+	},
+	"Require": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "req",
+		"body": [
+			"const $1 = require('$2');"
+		],
+		"description": "Require"
+	},
+	"Import classnames": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "icn",
+		"body": [
+			"import cn from 'classnames';"
+		],
+		"description": "Import classnames"
+	},
+	"Placeholder component": {
+		"scope": "javascript,typescript,typescriptreact,javascriptreact",
+		"prefix": "mpc",
+		"body": [
+			"import React from 'react'",
+			"",
+			"export default () => <div>Test</div>"
+		],
+		"description": "Placeholder component"
+	},
+	"export default": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+		"prefix": "cexport",
+		"body": [
+			"export default $0"
+		],
+		"description": "export default"
+	},
+	"useCallback": {
+		"scope": "javascript,javascriptreact,typescript,typescriptreact",
+		"prefix": "ccallback",
+		"body": [
+			"useCallback(($1) => $0, [])"
+		],
+		"description": "useCallback"
+	},
+	"useState": {
+		"scope": "javascript,javascriptreact",
+		"prefix": "cstate",
+		"body": [
+			"const [$1, set${1/(.*)/${1:/capitalize}/}] = useState()"
+		],
+		"description": "useState"
+	},
+	"useState TypeScript": {
+		"scope": "typescript,typescriptreact",
+		"prefix": "cstate",
+		"body": [
+			"const [$1, set${1/(.*)/${1:/capitalize}/}] = useState<$2 | undefined>()"
+		],
+		"description": "useState"
+	},
+	"Import flutter_bloc": {
+		"scope": "dart",
+		"prefix": "ibloc",
+		"body": [
+			"import 'package:flutter_bloc/flutter_bloc.dart';"
+		],
+		"description": "Import flutter_bloc"
+	},
+	"Import collection": {
+		"scope": "dart",
+		"prefix": "icoll",
+		"body": [
+			"import 'package:collection/collection.dart';"
+		],
+		"description": "Import collection for extensions"
+	},
+	"Create @override props - equatable": {
+		"scope": "dart",
+		"prefix": "cprops",
+		"body": [
+			"@override",
+			"List<Object> get props => [$1];"
+		],
+		"description": "Override props getter"
+	},
+	"Stateless Widget template": {
+		"scope": "dart",
+		"prefix": "tstateless",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class $1 extends StatelessWidget {",
+			"  const $1({Key? key}) : super(key: key);",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return SizedBox();",
+			"  }",
+			"}"
+		],
+		"description": "Stateless Widget template"
+	},
+	"Cubit test": {
+		"scope": "dart",
+		"prefix": "tcubittest",
+		"body": [
+			"import 'package:flutter_test/flutter_test.dart';",
+			"",
+			"void main() {",
+			"  group('$1', () {",
+			"    late $1 cubit;",
+			"",
+			"    setUp(() {",
+			"      cubit = $1();",
+			"    });",
+			"",
+			"    test('initial state is XXX', () {",
+			"      expect(cubit.state, []);",
+			"    });",
+			"",
+			"    test('emits...', () {",
+			"      cubit.addDocument(\"Script\", \"Hello World!\");",
+			"",
+			"      expect(cubit.state[0].name, \"Script\");",
+			"      expect(cubit.state[0].text, \"Hello World!\");",
+			"      expect(cubit.state[0].id, isNotEmpty);",
+			"    });",
+			"  });",
+			"}"
+		],
+		"description": "Cubit test template"
+	},
+	"Cubit Builder": {
+		"scope": "dart",
+		"prefix": "ccubitbuilder",
+		"body": [
+			"return BlocBuilder<$1Cubit, $1State>(builder: (context, state) {",
+			"  return SizedBox();",
+			"});"
+		]
+	},
+	"Widget test": {
+		"scope": "dart",
+		"prefix": "twidgettest",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_test/flutter_test.dart';",
+			"",
+			"import '../utils.dart';",
+			"",
+			"void main() {",
+			"  group('$1', () {",
+			"    testWidgets('can be found', (WidgetTester tester) async {",
+			"      const key = Key('my_widget');",
+			"",
+			"      await tester.pumpWidget(",
+			"        boilerplate(",
+			"          child: Column(",
+			"            children: [",
+			"              const Text(",
+			"                'Hello',",
+			"                key: key,",
+			"              ),",
+			"            ],",
+			"          ),",
+			"        ),",
+			"      );",
+			"",
+			"      expect(find.byKey(key), findsNothing);",
+			"    });",
+			"  });",
+			"}"
+		]
+	}
 }

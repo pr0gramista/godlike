@@ -53,3 +53,14 @@ CMD + Arrow down - open file (macOS...) or space
 + encode64 - encode64, decode64 commands
 + [macOS](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/osx) - cdf (cd to current Finder directory), pfs (Finder selection path), pfd (path of Finder)
 + [git](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git) - gp, gst, glog, gl
+
+# VS Code Extensions
+List extensions
+```
+code --list-extensions
+```
+
+Install extensions
+```
+code --install-extension <extension-id>
+```

@@ -2,7 +2,7 @@
 ## Before you even boot
 Set all necessary options in RPi Imager like SSH, hostname, username and password, WiFi access.
 
-## Installing OctoPrint
+## OctoPrint
 [Good forum post](https://community.octoprint.org/t/setting-up-octoprint-on-a-raspberry-pi-running-raspbian-or-raspberry-pi-os/2337)
 
 ```
@@ -58,7 +58,7 @@ sudo mv octoprint.service /etc/systemd/system/octoprint.service
 sudo systemctl start octoprint.service
 ```
 
-## Installing Nextcloud
+## Nextcloud
 Based mostly on [this post](http://unixetc.co.uk/2016/11/20/simple-nextcloud-installation-on-raspberry-pi/) with some little tweaks
 
 ```
@@ -84,4 +84,46 @@ sudo chown www-data:www-data config apps
 
 # Go http://IP/nextcloud and complete the installation
 # Note that we are using custom location for data - I had to manually specify it in installer
+```
+
+## Home Assistant
+This works on Raspberry Pi with Docker installed.
+```
+sudo docker run -d \
+--name homeassistant \
+--privileged \
+--restart=unless-stopped \
+-e TZ=Europe/Warsaw \
+-v /home/caveman/homeconfig:/config \
+--network=host \
+ghcr.io/home-assistant/home-assistant:stable
+```
+Replace `/home/caveman/homeconfig` with your path to your config directory (can be empty).
+
+Note: sudo is required for rootless install - this can be probably avoided with [post install steps](https://docs.docker.com/engine/install/linux-postinstall/).
+
+The app should be ready to setup at port 8123.
+
+### Configuration
+Home Assistant will create `configuration.yaml` file in the config directory.
+
+### Debug
+Run bash inside container
+```
+docker exec -it homeassistant bash
+```
+
+### Using File device
+Considering JSON file `{"temperature": 26, "humidity": 44}` (dht.json).
+
+The value template is:
+```
+{{ value_json.temperature }}
+```
+
+In configuration.yaml I added, but not sure if that is necessary.
+```
+homeassistant:
+  allowlist_external_dirs:
+    - "/config"
 ```
